@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nidocument>
+<nicomment>
+Custom errors codes for Andor SDK2 camera API
+</nicomment>
+<nierror code="5090">
+Andor SDK error DRV_IOCERROR: Integrate On Chip setup error.
+</nierror>
+<nierror code="5086">
+Andor SDK error DRV_P10ERROR: Tenth argument invalid.
+</nierror>
+<nierror code="5085">
+Andor SDK error DRV_P9ERROR: Ninth argument invalid.
+</nierror>
+<nierror code="5084">
+Andor SDK error DRV_P8ERROR: Eighth argument invalid.
+</nierror>
+<nierror code="5083">
+Andor SDK error DRV_P7ERROR: Seventh argument invalid.
+</nierror>
+<nierror code="5082">
+Andor SDK error DRV_I2CTIMEOUT: Timed out reading from device.
+</nierror>
+<nierror code="5081">
+Andor SDK error DRV_I2CDEVNOTFOUND: Could not find the specified device.
+</nierror>
+<nierror code="5079">
+Andor SDK error DRV_INVALID_FILTER: Filter not available for current acquisition.
+</nierror>
+<nierror code="5078">
+Andor SDK error DRV_INVALID_MODE: Acquisition or readout mode is not available.
+</nierror>
+<nierror code="5077">
+Andor SDK error DRV_P6ERROR: Sixth argument invalid.
+</nierror>
+<nierror code="5076">
+Andor SDK error DRV_P5ERROR: Fifth argument invalid.
+</nierror>
+<nierror code="5075">
+Andor SDK error DRV_NOT_INITIALIZED: System not initialized.
+</nierror>
+<nierror code="5073">
+Andor SDK error DRV_IDLE: The system is not currently acquiring.
+</nierror>
+<nierror code="5072">
+Andor SDK error DRV_ACQUIRING: Acquisition in progress.
+</nierror>
+<nierror code="5071">
+Andor SDK error DRV_COFERROR: Unable to load "*.COF".
+</nierror>
+<nierror code="5070">
+Andor SDK error DRV_INIERROR: Unable to load "DETECTOR.INI".
+</nierror>
+<nierror code="5069">
+Andor SDK error DRV_P4ERROR: Fourth argument invalid.
+</nierror>
+<nierror code="5068">
+Andor SDK error DRV_P3ERROR: Third argument invalid.
+</nierror>
+<nierror code="5067">
+Andor SDK error DRV_P2ERROR: Second argument invalid.
+</nierror>
+<nierror code="5066">
+Andor SDK error DRV_P1ERROR: First argument invalid.
+</nierror>
+<nierror code="5054">
+Andor SDK error DRV_GPIBERROR: Error communicating with GPIB card.
+</nierror>
+<nierror code="5053">
+Andor SDK error DRV_FLEXERROR: Unable to load "*.RBF".
+</nierror>
+<nierror code="5037">
+Andor SDK error DRV_TEMPERATURE_NOT_REACHED: Temperature has not reached set point.
+</nierror>
+<nierror code="5036">
+Andor SDK error DRV_TEMPERATURE_STABILIZED: Temperature has stabilized at set point.
+</nierror>
+<nierror code="5034">
+Andor SDK error DRV_TEMPERATURE_OFF: Temperature is OFF.
+</nierror>
+<nierror code="5024">
+Andor SDK error DRV_NO_NEW_DATA: There is no new data yet.
+</nierror>
+<nierror code="5017">
+Andor SDK error DRV_ACQUISITION_ERRORS: Acquisition settings invalid.
+</nierror>
+<nierror code="5013">
+Andor SDK error DRV_ERROR_ACK: Unable to communicate with card.
+</nierror>
+<nierror code="5010">
+Andor SDK error DRV_ERROR_PAGELOCK: Unable to acquire lock on requested memory.
+</nierror>
+<nierror code="5007">
+Andor SDK error DRV_UNKNOWN_FUNC: Unknown function, incorrect cof file.
+</nierror>
+<nierror code="5006">
+Andor SDK error DRV_ERROR_FILELOAD: Unable to load "*.COF" or "*.RBF" files.
+</nierror>
+<nierror code="5003">
+Andor SDK error DRV_VXDNOTINSTALLED: VxD not loaded.
+</nierror>
+<nierror code="5002">
+Andor SDK error DRV_SUCCESS: No error
+</nierror>
+<nierror code="5990">
+Andor SDK error DRV_ERROR_NOCAMERA
+</nierror>
+<nierror code="5991">
+Andor SDK error DRV_NOT_SUPPORTED
+</nierror>
+<nierror code="5992">
+Andor SDK error DRV_NOT_AVAILABLE
+</nierror>
+</nidocument>

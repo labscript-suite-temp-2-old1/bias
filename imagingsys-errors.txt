@@ -1,0 +1,25 @@
+<?xml version="1.0"?> 
+<nidocument> 
+<nicomment> 
+Error codes used by Monash BEC labs Imaging System
+</nicomment> 
+<nierror code="6000">
+ImagingSystem: Functionality not implemented, check compatibility
+</nierror>
+<nierror code="6010">
+ImagingSystem: Failed to execute MATLAB script
+</nierror>
+</nidocument>
+<nierror code="6040">
+ImagingSystem: TCP system timed out waiting for queue to be processed
+</nierror>
+<nierror code="6050">
+ImagingSystem: Error programming camera
+</nierror>
+<nierror code="6051">
+ImagingSystem: Acquisition not running
+</nierror>
+<nierror code="6052">
+ImagingSystem: Timed out waiting for data
+</nierror>
+</nidocument>
