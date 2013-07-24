@@ -126,8 +126,11 @@ def fit_gaussian_2d(image, scale_factor=1, **kwargs):
         u_params = params * NaN
 
     # get the cross-sections of the data
-    X_section = image[params[1],:]
-    Y_section = image[:,params[0]]
+    try:
+        X_section = image[params[1],:]
+        Y_section = image[:,params[0]]
+    except IndexError:
+        raise Exception('Fit center not inside image')
     
     # get the fits along these slices
     X_fit = gaussian_2d(X[0,:], params[1], *params)
