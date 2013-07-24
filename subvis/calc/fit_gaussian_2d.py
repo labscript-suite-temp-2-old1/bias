@@ -129,16 +129,14 @@ def fit_gaussian_2d(image, scale_factor=1, **kwargs):
     try:
         X_section = image[params[1],:]
         Y_section = image[:,params[0]]
+        # get the fits along these slices
+        X_fit = gaussian_2d(X[0,:], params[1], *params)
+        Y_fit = gaussian_2d(params[0], Y[:,0], *params)
+        # put them together to return a 2d numpy array
+        X_section = array([X_section, X_fit])
+        Y_section = array([Y_section, Y_fit])
     except IndexError:
-        raise Exception('Fit center not inside image')
-    
-    # get the fits along these slices
-    X_fit = gaussian_2d(X[0,:], params[1], *params)
-    Y_fit = gaussian_2d(params[0], Y[:,0], *params)
-    
-    # put them together to return a 2d numpy array
-    X_section = array([X_section, X_fit])
-    Y_section = array([Y_section, Y_fit])
+        X_fit = Y_fit = X_section = Y_section = zeros((0,))
     
     # append the area under the fitted Gaussian (in OD*pixel_area)
     N_int = 4*pi*params[2:5].prod()
