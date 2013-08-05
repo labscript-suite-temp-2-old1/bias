@@ -185,7 +185,7 @@ def fit_gaussian_2d(image, scale_factor=1, binsize=1, clip=0, mask=4.0, **kwargs
     Y_section = array([Y_section, Y_fit])
        
     # append the area under the fitted Gaussian (in OD*pixel_area)
-    N_int = 4*pi*params[2:5].prod()
+    N_int = 2*pi*params[2:5].prod()
     u_N_int = sqrt(sum((u_params[2:5]/params[2:5])**2)) * N_int
     params = append(params, N_int)
     u_params = append(u_params, u_N_int)
