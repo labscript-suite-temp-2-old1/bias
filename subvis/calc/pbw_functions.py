@@ -5,10 +5,10 @@ from __future__ import division
 from numpy import *
 from fit_gaussian_2d import *
 
-def compute_OD(atom,flat,dark,cutoff=1,alpha_sigma=1,sigma=1,pixarea=1):
-    mask = (flat-dark)<cutoff # to remove
-    atom = ma.array(atom - dark,mask=mask,dtype=float32)
-    flat = ma.array(flat - dark,mask=mask,dtype=float32)
+def compute_OD(atom, flat, dark, cutoff=1, alpha_sigma=1, sigma=1, pixarea=1):
+    mask = (flat-dark) < cutoff # to remove
+    atom = ma.array(atom-dark, mask=mask, dtype=float32)
+    flat = ma.array(flat-dark, mask=mask, dtype=float32)
     ratio = abs(atom/flat)
     od = -log(ratio)
     if alpha_sigma > 0:

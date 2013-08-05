@@ -1,7 +1,17 @@
+# from __future__ import division
+# from lyse import *
 from numpy import *
 from scipy.optimize import leastsq
 import numexpr as ne
-  
+
+def rebin(a, m=5):
+    if m > 1:
+        s = floor_divide(a.shape, m)
+        sh = s[0], m, s[1], m
+        return a[:s[0]*m,:s[1]*m].reshape(sh).mean(3).mean(1)
+    else:
+        return a
+
 def bokeh_blur(image, r=10):
     """Convolves the image with a disc of radius r pixels"""
     from scipy.signal import fftconvolve
@@ -35,7 +45,7 @@ def moments(image, usemax=False):
     sigma_y = sqrt(abs((arange(col.size)-y0)**2*col).sum()/abs(col.sum()))
     row = image[int(y0), :]
     sigma_x = sqrt(abs((arange(row.size)-x0)**2*row).sum()/abs(row.sum()))
-    amplitude = total/(exp(-1/2*((X-x0)/sigma_x)**2 - 1/2*((Y-y0)/sigma_y)**2)).sum()
+    amplitude = total/(exp(-0.5*((X-x0)/sigma_x)**2 - 0.5*((Y-y0)/sigma_y)**2)).sum()
     return x0, y0, sigma_x, sigma_y, amplitude
 
 def get_offset(image):
@@ -61,7 +71,14 @@ def gaussian_1d(x, x0, sigma_x, amplitude, offset):
     return amplitude * exp(-0.5*((x-x0)/sigma_x)**2) + offset
 
 def gaussian_2d(x, y, x0, y0, sigma_x, sigma_y, amplitude, offset):
+    # return amplitude * exp(-0.5*((x-x0)/sigma_x)**2 - 0.5*((y-y0)/sigma_y)**2) + offset
     return ne.evaluate("amplitude * exp(-0.5*((x-x0)/sigma_x)**2 - 0.5*((y-y0)/sigma_y)**2) + offset")
+
+def tf_2d(X, Y, x0, y0, Rx, Ry, peak, offset):
+    result = ne.evaluate('(1 - (X-x0)**2/Rx**2 - (Y-y0)**2/Ry**2)')
+    result[result < 0] = 0
+    result = ne.evaluate('peak*result**(3/2) + offset')
+    return result
     
 def get_roi_and_offset(image, params):
     ny, nx = image.shape
@@ -97,27 +114,39 @@ def get_roi_and_offset(image, params):
     # return the ROI, new centroids and offset:
     return image[miny:maxy, minx:maxx], x0-minx, y0-miny, minx, miny, offset
 
-def fit_gaussian_2d(image, scale_factor=1, **kwargs):
-    params_guess = get_gaussian_guess(image)
-    ny, nx = image.shape
-    Y, X = indices(image.shape)
+def fit_gaussian_2d(image, scale_factor=1, binsize=1, clip=0, mask=4.0, **kwargs):
+    fitfn = gaussian_2d
+    # fitfn = tf_2d
+    imagef = rebin(image, binsize)
+    ny, nx = imagef.shape
+    Y, X = indices(imagef.shape)
+    params_guess = get_gaussian_guess(imagef)
     
     def residuals(params):
-        err = gaussian_2d(X, Y, *params) - image
+        fit_img = fitfn(X, Y, *params) 
+        if clip > 0:
+            fit_image[fit_image > clip] = clip
+            imagef[imagef > clip] = clip
+        err = fit_img - imagef
+        err[imagef > mask] = 0
         return err.ravel()
     
     # Fit the gaussian distribution:
-    params, covariance, z, z, z = leastsq(residuals, params_guess, maxfev=4000, full_output=True)
-    # scale the first four of the fit parameters (the spatial ones) back to normal:
-    params[:4] *= scale_factor
+    params, covariance, z, z, z = leastsq(residuals, params_guess, maxfev=400000, full_output=True)
+    # Rescale the first four of the fit parameters (the spatial ones):
+    params[:4] *= scale_factor*binsize
+    # Fix the offset due to rebin averaging
+    params[:2] += (binsize-1)/2.0
+    # Ensure the widths are positive
+    params[2:4] = abs(params[2:4])
     if covariance is not None:
         # And their uncertainties:
-        covariance[:,:4] *= scale_factor
-        covariance[:4,:] *= scale_factor
+        covariance[:,:4] *= scale_factor*binsize
+        covariance[:4,:] *= scale_factor*binsize
     
         # compute parameter uncertainties and chi-squared
         u_params = [sqrt(abs(covariance[i,i])) if isinstance(covariance,ndarray) else inf for i in range(len(params))]
-        reduced_chisquared = (residuals(params)**2).sum()/((nx*ny - len(params)))
+        reduced_chisquared = (residuals(params)**2).sum()/((prod(imagef.shape) - len(params)))
         try:
             covariance = reduced_chisquared*covariance
         except TypeError:
@@ -125,19 +154,36 @@ def fit_gaussian_2d(image, scale_factor=1, **kwargs):
     else:
         u_params = params * NaN
 
-    # get the cross-sections of the data
+    # define dimensions and co-ordinates of original image
+    ny, nx = image.shape
+    Y, X = indices(image.shape) * scale_factor
+
+    # get the cross-sections of the data and fits along these slices
     try:
         X_section = image[params[1],:]
-        Y_section = image[:,params[0]]
-        # get the fits along these slices
-        X_fit = gaussian_2d(X[0,:], params[1], *params)
-        Y_fit = gaussian_2d(params[0], Y[:,0], *params)
-        # put them together to return a 2d numpy array
-        X_section = array([X_section, X_fit])
-        Y_section = array([Y_section, Y_fit])
+        X_fit = fitfn(X[0,:], params[1], *params)
     except IndexError:
-        X_fit = Y_fit = X_section = Y_section = zeros((0,))
-    
+        if params[1] >= ny:
+            X_section = image[-1,:]
+            X_fit = fitfn(X[0,:], ny-1, *params)
+        else:
+            X_section = image[0,:]
+            X_fit = fitfn(X[0,:], 0, *params)
+    try:
+        Y_section = image[:,params[0]]     
+        Y_fit = gaussian_2d(params[0], Y[:,0], *params)
+    except IndexError:
+        if params[0] >= nx:
+            Y_section = image[:,-1]
+            Y_fit = fitfn(nx-1, Y[:,0], *params)
+        else:
+            Y_section = image[:,0]
+            Y_fit = fitfn(0, Y[:,0], *params)
+            
+    # put them together to return a 2d numpy array
+    X_section = array([X_section, X_fit])
+    Y_section = array([Y_section, Y_fit])
+       
     # append the area under the fitted Gaussian (in OD*pixel_area)
     N_int = 4*pi*params[2:5].prod()
     u_N_int = sqrt(sum((u_params[2:5]/params[2:5])**2)) * N_int
