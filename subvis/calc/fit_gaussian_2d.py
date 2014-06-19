@@ -80,7 +80,7 @@ def tf_2d(X, Y, x0, y0, Rx, Ry, peak, offset):
     result = ne.evaluate('peak*result**(3/2)+offset')
     return result
 
-def fit_2d(image, fit_function='Gaussian', binsize=1, clip=0, mask=4.0, **kwargs):
+def fit_2d(image, fit_function='Gaussian', rebin_factor=1, binning=(1,1), clip=0, mask=4.0,  **kwargs):
     if 'gaussian' in fit_function.lower():
         fitfn = gaussian_2d
     else:
@@ -89,7 +89,7 @@ def fit_2d(image, fit_function='Gaussian', binsize=1, clip=0, mask=4.0, **kwargs
         image = ma.masked_invalid(image)
     if mask:
         image = ma.masked_greater(image, mask)
-    imagef = rebin(image, binsize)
+    imagef = rebin(image, rebin_factor)
     ny, nx = imagef.shape
     Y, X = indices(imagef.shape)
     params_guess = get_gaussian_guess(imagef)
@@ -105,15 +105,24 @@ def fit_2d(image, fit_function='Gaussian', binsize=1, clip=0, mask=4.0, **kwargs
     # Perform the fit
     params, covariance, z, z, z = leastsq(residuals, params_guess, maxfev=400000, full_output=True)
     # Rescale the first four of the fit parameters (the spatial ones):
-    params[:4] *= binsize
+    params[0] *= rebin_factor*binning[0]
+    params[1] *= rebin_factor*binning[1]
+    params[2] *= rebin_factor*binning[0]
+    params[3] *= rebin_factor*binning[1]
     # Fix the offset due to rebin averaging
-    params[:2] += (binsize-1)/2.0
+    params[:2] += (rebin_factor-1)/2.0
     # Ensure the widths are positive
     params[2:4] = abs(params[2:4])
     if covariance is not None:
         # And their uncertainties:
-        covariance[:,:4] *= binsize
-        covariance[:4,:] *= binsize
+        covariance[:,0] *= rebin_factor*binning[0]
+        covariance[:,1] *= rebin_factor*binning[1]
+        covariance[:,2] *= rebin_factor*binning[0]
+        covariance[:,3] *= rebin_factor*binning[1]
+        covariance[0,:] *= rebin_factor*binning[0]
+        covariance[1,:] *= rebin_factor*binning[1]
+        covariance[2,:] *= rebin_factor*binning[0]
+        covariance[3,:] *= rebin_factor*binning[1]
 
         # compute parameter uncertainties and chi-squared
         u_params = [sqrt(abs(covariance[i,i])) if isinstance(covariance,ndarray) else inf for i in range(len(params))]
