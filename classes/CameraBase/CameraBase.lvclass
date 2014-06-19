@@ -22,7 +22,7 @@
 	<Item Name="CameraBase.ctl" Type="Class Private Data" URL="CameraBase.ctl">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
-	<Item Name="CameraAbort.vi" Type="VI" URL="../CameraAbort.vi">
+	<Item Name="CameraAbort.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraAbort.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%8!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#Z!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$E.B&lt;76S95*B=W5A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!#R!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$5.B&lt;76S95*B=W5A;7Y!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=#!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!!!!!!*!!!!!!!1!)!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -32,7 +32,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 	</Item>
-	<Item Name="CameraCheckROI.vi" Type="VI" URL="../CameraCheckROI.vi">
+	<Item Name="CameraCheckROI.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraCheckROI.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'B!!!!$Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!N!!Q!%&lt;'6G&gt;!!!#5!$!!.U&lt;X!!#U!$!!6S;7&gt;I&gt;!!.1!-!"G*P&gt;(2P&lt;1!!,Q$R!!!!!!!!!!%-5E^*8X*F9X1O9X2M!"J!5!!%!!5!"A!(!!A(5E^*8W^V&gt;!!O1(!!(A!!&amp;"*$97VF=G&amp;#98.F,GRW9WRB=X-!!!Z$97VF=G&amp;#98.F)'^V&gt;!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!P!0%!!!!!!!!!!1R34UF@=G6D&gt;#ZD&gt;'Q!'E"1!!1!"1!'!!=!#!:34UF@;7Y!!#R!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$5.B&lt;76S95*B=W5A;7Y!6!$Q!!Q!!Q!%!!E!#A!%!!1!"!!%!!M!"!!-!!U#!!"Y!!!.#!!!!!!!!!U+!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!#!!!!*!!!!!!!1!/!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -41,7 +41,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1107821056</Property>
 	</Item>
-	<Item Name="CameraConnect.vi" Type="VI" URL="../CameraConnect.vi">
+	<Item Name="CameraConnect.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraConnect.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'V!!!!%1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!Z!-0````]%&lt;G&amp;N:1!!$5!)!!:T:8*J97Q!!"*!-0````]*;7ZU:8*G97.F!!Z!-0````]%&lt;7&amp;L:1!!$E!Q`````Q6N&lt;W2F&lt;!!.1!I!"X"J?'6M8X=!$5!+!!&gt;Q;8BF&lt;&amp;^I!$M!]=WY[H=!!!!"$E.B&lt;76S95FO:G]O9X2M!#2!5!!(!!5!"A!(!!A!#1!+!!M+1W&amp;N:8*B37ZG&lt;Q!!,E"Q!"Y!!"131W&amp;N:8*B1G&amp;T:3ZM&gt;G.M98.T!!!/1W&amp;N:8*B1G&amp;T:3"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!,%"Q!"Y!!"131W&amp;N:8*B1G&amp;T:3ZM&gt;G.M98.T!!!.1W&amp;N:8*B1G&amp;T:3"J&lt;A"5!0!!$!!$!!1!$!!.!!1!"!!%!!1!$A!'!!5!$Q-!!(A!!!U)!!!!!!!!#1!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!A!!!!)!!!!EA!!!!!"!"!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">256</Property>
@@ -51,7 +51,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 	</Item>
-	<Item Name="CameraGetData.vi" Type="VI" URL="../CameraGetData.vi">
+	<Item Name="CameraGetData.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraGetData.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;-!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!5!"A!!)%"!!!0```````````````]!"1JJ&lt;7&amp;H:6^E982B!!!O1(!!(A!!&amp;"*$97VF=G&amp;#98.F,GRW9WRB=X-!!!Z$97VF=G&amp;#98.F)'^V&gt;!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!11#%+;W6F=#"P='6O0Q!!,%"Q!"Y!!"131W&amp;N:8*B1G&amp;T:3ZM&gt;G.M98.T!!!.1W&amp;N:8*B1G&amp;T:3"J&lt;A"5!0!!$!!$!!1!"A!(!!1!"!!%!!1!#!!%!!E!#A)!!(A!!!U)!!!!!!!!#1!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!+!!!!E!!!!!!"!!M!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
@@ -61,7 +61,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1082130944</Property>
 	</Item>
-	<Item Name="CameraGetInfo.vi" Type="VI" URL="../CameraGetInfo.vi">
+	<Item Name="CameraGetInfo.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraGetInfo.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;2!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!$5!)!!:T:8*J97Q!!!Z!-0````]%&lt;G&amp;N:1!!,E"Q!"Y!!"131W&amp;N:8*B1G&amp;T:3ZM&gt;G.M98.T!!!/1W&amp;N:8*B1G&amp;T:3"P&gt;81!!!1!!!!31$$`````#'RP9W&amp;U;7^O!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!#R!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$5.B&lt;76S95*B=W5A;7Y!91$Q!!Q!!Q!%!!5!"A!(!!A!"Q!(!!E!"Q!(!!I#!!"Y!!!.#!!!#1!!!!E!!!!.#Q!!!!!!!!E!!!!!!!!!!!!!!!A!!!!!!!!!!!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!#Q!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -70,7 +70,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1342972416</Property>
 	</Item>
-	<Item Name="CameraKill.vi" Type="VI" URL="../CameraKill.vi">
+	<Item Name="CameraKill.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraKill.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%8!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#Z!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$E.B&lt;76S95*B=W5A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!#R!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$5.B&lt;76S95*B=W5A;7Y!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=#!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!!!!!!*!!!!!!!1!)!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -80,7 +80,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 	</Item>
-	<Item Name="CameraQueryAcquire.vi" Type="VI" URL="../CameraQueryAcquire.vi">
+	<Item Name="CameraQueryAcquire.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraQueryAcquire.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%S!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!$5!(!!:G=G&amp;N:8-!!!Z!)1FB9X&amp;V;8*J&lt;G=!,E"Q!"Y!!"131W&amp;N:8*B1G&amp;T:3ZM&gt;G.M98.T!!!/1W&amp;N:8*B1G&amp;T:3"P&gt;81!!!1!!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!#R!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$5.B&lt;76S95*B=W5A;7Y!6!$Q!!Q!!Q!%!!5!"A!(!!=!"Q!(!!A!"Q!(!!E$!!"Y!!!.#!!!#1!!!!E!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!*!!!!!!!1!+!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -90,7 +90,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 	</Item>
-	<Item Name="CameraQueryProperties.vi" Type="VI" URL="../CameraQueryProperties.vi">
+	<Item Name="CameraQueryProperties.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraQueryProperties.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;`!!!!$Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!%U!'!!VT:7ZT&lt;X*@;'6J:WBU!".!"A!-=W6O=W^S8X&gt;J:(2I!!!O1(!!(A!!&amp;"*$97VF=G&amp;#98.F,GRW9WRB=X-!!!Z$97VF=G&amp;#98.F)'^V&gt;!!!%%!Q`````Q:4&gt;(*J&lt;G=!!!J!5Q6W97RV:1!11&amp;!!!A!(!!A&amp;='&amp;S97U!'%"!!!(`````!!E+9W&amp;N8X"B=G&amp;N=Q!!"!!!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!,%"Q!"Y!!"131W&amp;N:8*B1G&amp;T:3ZM&gt;G.M98.T!!!.1W&amp;N:8*B1G&amp;T:3"J&lt;A"5!0!!$!!$!!1!"1!'!!I!#Q!,!!M!$!!,!!M!$1)!!(A!!!U)!!!*!!!!#1!!!)U,!!!*!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!E!!!!!!"!!Y!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
@@ -100,17 +100,17 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 	</Item>
-	<Item Name="CameraSetParams.vi" Type="VI" URL="../CameraSetParams.vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)_!!!!&amp;Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!#U!$!!2M:7:U!!!*1!-!!X2P=!!,1!-!"8*J:WBU!!V!!Q!'9G^U&gt;'^N!!!P!0%!!!!!!!!!!1R34UF@=G6D&gt;#ZD&gt;'Q!'E"1!!1!"!!&amp;!!9!"Q&gt;S&lt;WF@&lt;X6U!!R!5Q&gt;798*J97ZU!"B!1!!"`````Q!*#G&amp;U&gt;(*J9H6U:8-!!#Z!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$E.B&lt;76S95*B=W5A&lt;X6U!!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!01!I!#'6Y='^T&gt;8*F!!!/1#%):8BU:8*O97Q!!#M!]1!!!!!!!!!"$&amp;*036^S:7.U,G.U&lt;!!71&amp;!!"!!%!!5!"A!(!X*P;1!.1!-!"G:S97VF=Q!!#U!&amp;!!6C;7Z@?!!,1!5!"7*J&lt;F^Z!$U!]=N$C1=!!!!"&amp;%6Y='^T&gt;8*F5W6U&gt;'FO:X-O9X2M!#"!5!!'!!Y!$Q!1!"%!%A!4#(.F&gt;(2J&lt;G&gt;T!!!M1(!!(A!!&amp;"*$97VF=G&amp;#98.F,GRW9WRB=X-!!!V$97VF=G&amp;#98.F)'FO!&amp;1!]!!-!!-!#!!+!!M!$!!-!!Q!$!!.!!Q!&amp;!!6!Q!!?!!!$1A!!!E!!!!*!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!A!!!#1!!!!!!%!&amp;A!!!!!</Property>
+	<Item Name="CameraSetParams.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraSetParams.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!*'!!!!'!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!#U!$!!2M:7:U!!!*1!-!!X2P=!!,1!-!"8*J:WBU!!V!!Q!'9G^U&gt;'^N!!!P!0%!!!!!!!!!!1R34UF@=G6D&gt;#ZD&gt;'Q!'E"1!!1!"!!&amp;!!9!"Q&gt;S&lt;WF@&lt;X6U!!R!5Q&gt;798*J97ZU!"B!1!!"`````Q!*#G&amp;U&gt;(*J9H6U:8-!!#Z!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$E.B&lt;76S95*B=W5A&lt;X6U!!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!01!I!#'6Y='^T&gt;8*F!!!/1#%):8BU:8*O97Q!!#M!]1!!!!!!!!!"$&amp;*036^S:7.U,G.U&lt;!!71&amp;!!"!!%!!5!"A!(!X*P;1!.1!-!"G:S97VF=Q!!"U!&amp;!!&amp;Y!!&gt;!"1!"?1!31&amp;!!!A!3!"-(9GFO&lt;GFO:Q!\!0(0R__C!!!!!22&amp;?("P=X6S:6.F&gt;(2J&lt;G&gt;T,G.U&lt;!!?1&amp;!!"1!/!!]!%!!2!"1)=W6U&gt;'FO:X-!!#R!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$5.B&lt;76S95*B=W5A;7Y!6!$Q!!Q!!Q!)!!I!#Q!-!!Q!$!!-!!U!$!!6!"9$!!"Y!!!.#!!!#1!!!!E!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!#!!!!*!!!!!!!1!8!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.MustOverride" Type="Bool">true</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1350574608</Property>
 	</Item>
-	<Item Name="CameraSetProperties.vi" Type="VI" URL="../CameraSetProperties.vi">
+	<Item Name="CameraSetProperties.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraSetProperties.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;D!!!!$A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!""!-0````]'5X2S;7ZH!!!+1&amp;-&amp;&gt;G&amp;M&gt;75!%%"1!!)!"1!'"8"B=G&amp;N!"B!1!!"`````Q!(#G.B&lt;6^Q98*B&lt;8-!!#Z!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$E.B&lt;76S95*B=W5A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!J!)12T:81`!!!M1(!!(A!!&amp;"*$97VF=G&amp;#98.F,GRW9WRB=X-!!!V$97VF=G&amp;#98.F)'FO!&amp;1!]!!-!!-!"!!)!!E!"!!%!!1!"!!+!!1!#Q!-!Q!!?!!!$1A!!!!!!!!*!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!A!!!#3!!!!!!%!$1!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">1073742080</Property>
@@ -120,7 +120,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1107821074</Property>
 	</Item>
-	<Item Name="CameraSetTimeout.vi" Type="VI" URL="../CameraSetTimeout.vi">
+	<Item Name="CameraSetTimeout.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraSetTimeout.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%V!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"&amp;!"Q!,6'FN:7^V&gt;#"T:81!,E"Q!"Y!!"131W&amp;N:8*B1G&amp;T:3ZM&gt;G.M98.T!!!/1W&amp;N:8*B1G&amp;T:3"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!$5!(!!&gt;5;7VF&lt;X6U!#R!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$5.B&lt;76S95*B=W5A;7Y!6!$Q!!Q!!Q!%!!5!"A!%!!1!"!!%!!=!"!!)!!E#!!"Y!!!.#!!!!!!!!!E!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!#!!!!*!!!!!!!1!+!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
@@ -129,7 +129,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1116209664</Property>
 	</Item>
-	<Item Name="CameraStartAcquire.vi" Type="VI" URL="../CameraStartAcquire.vi">
+	<Item Name="CameraStartAcquire.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/CameraBase/CameraStartAcquire.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%8!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#Z!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$E.B&lt;76S95*B=W5A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!#R!=!!?!!!5%E.B&lt;76S95*B=W5O&lt;(:D&lt;'&amp;T=Q!!$5.B&lt;76S95*B=W5A;7Y!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!*!!!!!!!1!)!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
