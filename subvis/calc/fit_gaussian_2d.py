@@ -105,24 +105,15 @@ def fit_2d(image, fit_function='Gaussian', rebin_factor=1, binning=(1,1), clip=0
     # Perform the fit
     params, covariance, z, z, z = leastsq(residuals, params_guess, maxfev=400000, full_output=True)
     # Rescale the first four of the fit parameters (the spatial ones):
-    params[0] *= rebin_factor*binning[0]
-    params[1] *= rebin_factor*binning[1]
-    params[2] *= rebin_factor*binning[0]
-    params[3] *= rebin_factor*binning[1]
+    params[:4] *= rebin_factor
     # Fix the offset due to rebin averaging
     params[:2] += (rebin_factor-1)/2.0
     # Ensure the widths are positive
     params[2:4] = abs(params[2:4])
     if covariance is not None:
         # And their uncertainties:
-        covariance[:,0] *= rebin_factor*binning[0]
-        covariance[:,1] *= rebin_factor*binning[1]
-        covariance[:,2] *= rebin_factor*binning[0]
-        covariance[:,3] *= rebin_factor*binning[1]
-        covariance[0,:] *= rebin_factor*binning[0]
-        covariance[1,:] *= rebin_factor*binning[1]
-        covariance[2,:] *= rebin_factor*binning[0]
-        covariance[3,:] *= rebin_factor*binning[1]
+        covariance[:,:4] *= rebin_factor
+        covariance[:4,:] *= rebin_factor
 
         # compute parameter uncertainties and chi-squared
         u_params = [sqrt(abs(covariance[i,i])) if isinstance(covariance,ndarray) else inf for i in range(len(params))]
@@ -164,6 +155,16 @@ def fit_2d(image, fit_function='Gaussian', rebin_factor=1, binning=(1,1), clip=0
     X_section = array([ma.filled(X_section, nan), X_fit])
     Y_section = array([ma.filled(Y_section, nan), Y_fit])
 
+    # fix up binning factor
+    params[0] *= binning[0]
+    params[1] *= binning[1]
+    params[2] *= binning[0]
+    params[3] *= binning[1]
+    u_params[0] *= binning[0]
+    u_params[1] *= binning[1]
+    u_params[2] *= binning[0]
+    u_params[3] *= binning[1]
+    
     # append the area under the fitted curve (in OD*pixel_area)
     if fitfn.__name__ == 'gaussian_2d':
         N_int = 2*pi*params[2:5].prod()
