@@ -35,6 +35,7 @@ def moments(image, usemax=False):
         # Blur by 10 pixels to diminish background noise
         image = bokeh_blur(image)
     total = image.sum()
+    assert total > 0
     Y,X = indices(image.shape)
     if usemax:
         y0,x0 = [item[0] for item in where(image == image.max())]
@@ -87,8 +88,9 @@ def fit_2d(image, fit_function='Gaussian', rebin_factor=1, binning=(1,1), clip=0
         fitfn = tf_2d
     if any(isnan(image)):
         image = ma.masked_invalid(image)
-    if mask:
-        image = ma.masked_greater(image, mask)
+    # if mask:
+        # image = ma.masked_greater(image, mask)
+    
     imagef = rebin(image, rebin_factor)
     ny, nx = imagef.shape
     Y, X = indices(imagef.shape)
@@ -184,6 +186,8 @@ def fit_2d(image, fit_function='Gaussian', rebin_factor=1, binning=(1,1), clip=0
     else:
         raise Exception('fit_function argument must be either Gaussian or ThomasFermi.')
     params_dict = dict(zip(params_names, zip(params, u_params)))
+    for k,v in params_dict.items():
+        print '\t',k,'=',v
     # return params_dict, X_section, Y_section
     params_dict['X_section'] = X_section
     params_dict['Y_section'] = Y_section   
