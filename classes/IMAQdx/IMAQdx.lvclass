@@ -55,7 +55,7 @@
 	<Item Name="CameraGetData.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/IMAQdx/CameraGetData.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;!!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!5!"A!!)%"!!!0```````````````]!"1JJ&lt;7&amp;H:6^E982B!!!I1(!!(A!!%!Z*45&amp;2:(AO&lt;(:D&lt;'&amp;T=Q!!$%Z*&gt;GFT;7^O)'^V&gt;!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!11#%+;W6F=#"P='6O0Q!!*E"Q!"Y!!"!/35V"572Y,GRW9WRB=X-!!!N/38:J=WFP&lt;C"J&lt;A"5!0!!$!!$!!1!"A!(!!1!"!!%!!1!#!!%!!E!#A-!!(A!!!U)!!!!!!!!#1!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!)!!!!EA!!!!!"!!M!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">1090519168</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
@@ -136,11 +136,11 @@
 	<Item Name="CameraStartAcquire.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/IMAQdx/CameraStartAcquire.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%,!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#B!=!!?!!!1$EF.16&amp;E?#ZM&gt;G.M98.T!!!-4EFW;8.J&lt;WYA&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!#:!=!!?!!!1$EF.16&amp;E?#ZM&gt;G.M98.T!!!,4EFW;8.J&lt;WYA;7Y!6!$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!*)!!!!!!1!)!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">33554432</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1342972432</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
 	</Item>
 	<Item Name="ReadSession.vi" Type="VI" URL="/&lt;userlib&gt;/BIAS2/classes/IMAQdx/ReadSession.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%'!!!!"A!%!!!!*A!X`````Q!&amp;%!#!!!!!!!%!"!!!!!%!!!!!!!!'35V"572Y!!!W1(!!&amp;1:*45&amp;2:(A!!!%!!1:*45&amp;2:(A!%!#!!!!!!!%!"!!!!!%!!!!!!!!(=W6T=WFP&lt;A!G1(!!(A!!%!Z*45&amp;2:(AO&lt;(:D&lt;'&amp;T=Q!!#EF.16&amp;E?#"P&gt;81!!#2!=!!?!!!1$EF.16&amp;E?#ZM&gt;G.M98.T!!!*35V"572Y)'FO!&amp;1!]!!-!!!!!!!#!!-!!!!!!!!!!!!!!!!!!!!%!A!!?!!!!!!!!!!!!!!*!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#1!!!!!!%!"1!!!!!</Property>
